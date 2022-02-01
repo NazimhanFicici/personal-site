@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useRef } from 'react';
 import './App.css';
+import NavbarComponent from './components/navbar';
+import { Routes, Route} from 'react-router-dom';
+
+import Home from './pages/home';
+import More from './pages/more';
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 function App() {
+  
+  const navbarRef = useRef();
+// use force route when mounted
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>  
+    <NavbarComponent ref={navbarRef} />
+    <Routes>
+      <Route path="/" element={<Home ref={navbarRef} />} />
+      <Route path="/more" element={<More />} />
+      <Route path="/home" element={<Home ref={navbarRef}/>} />
+    </Routes>
+    <Contact />
+    <Footer />
+    </>
   );
 }
 
