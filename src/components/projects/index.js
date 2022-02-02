@@ -1,24 +1,34 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Pagination} from 'swiper'
+
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function Projects() {
+
+     // add the swiper buttons to left and right gsegment and make their opacity 0 when you move across them let it move bla bla ..
+
     return (
-        <div className='projects-main swiper'>
+        <div className='projects-main'>
+            <h2>My Projects</h2>
             <a className="anchor" id="projects"></a>
-            <input type="radio" name="dot" id="one"></input>
-            <input type="radio" name="dot" id="two"></input>
-                <h2>My Projects</h2>
-            <div className='projects-cardgroup swiper-wrapper'>
             <Swiper
+                modules={[Navigation, Pagination]}
+                navigation = {true}
+                pagination= {{
+                    clickable: true
+                }}
                 spaceBetween={50}
                 slidesPerView={1}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
+            <div className='projects-cardgroup'>
                 <SwiperSlide>
-                    <div className='projects-group1 swiper-slide'>
-                        <div className='projects-card'>
+                    <div className='projects-group1'>
+                        <div className='projects-card flex-2'>
                             <h1 className='card-header'>Pulse Of The People</h1>
                             <p className='card-content'>Pulse Of The People is a project that developed to sharpen my Web Development Skills. 
                                 This projects front-end was developed mainly using Reactjs and Reduxjs, for the backend i have used Nodejs. This project is inspired by
@@ -29,7 +39,7 @@ function Projects() {
                             </p>
                             <a className="viewMore" href='https://github.com/NazimhanFicici/Pulse-of-the-People'>Visit GitHub</a>
                         </div>
-                        <div className='projects-card'>
+                        <div className='projects-card flex-1'>
                             <h1 className='card-header'>Doyle PSD</h1>
                             <p className='card-content'>Doyle PSD project is given to me by the company I did my internship which is POINTO Technology A.Ş. The main reason i was given this project
                             was teaching me basics of the html-css-js trio. I was only given a link of a zeplin.io platform and in that platform
@@ -37,7 +47,7 @@ function Projects() {
                             </p>
                             <a className="viewMore" href='https://github.com/NazimhanFicici/Doyle-Psd'>Visit GitHub</a>
                         </div>
-                        <div className='projects-card'>
+                        <div className='projects-card flex-3'>
                             <h1 className='card-header'>Distance Keeper</h1>
                             <p className='card-content'>Distance Keeper is one of my Graduation Projects, In this project i have developed an android application that uses
                             BLE Technology. In this project i have used BLE Beacon modules, the main feature of this beacon device is that it broadcasts one-sided broadcast,
@@ -52,8 +62,8 @@ function Projects() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='projects-group2 swiper-slide'>
-                    <div className='projects-card'>
+                    <div className='projects-group2'>
+                    <div className='projects-card flex-3'>
                                 <h1 className='card-header'>eVision</h1>
                                 <p className='card-content'>eVision is one of my Graduation Projects, in this project i developed a mobile application and used the same beacon device that i used on "Distance Keeper" project
                                 and converted this one sided broadcast to a communication with using this app. And the concept of this project was to provide voice commands to visually impaired people. Functioning of this project is like this:
@@ -63,13 +73,13 @@ function Projects() {
                                 </p>
                                 <a className="viewMore" href=''>Visit GitHub</a>
                             </div>
-                            <div className='projects-card'>
+                            <div className='projects-card flex-1'>
                                 <h1 className='card-header'>MR MOMOFUKU</h1>
                                 <p className='card-content'>Mr MOMOFUKU is my last Graduation Project, The goal of Mr. Momofuku is protecting the solar system from star pirates who want to steal the sun's radiation and energy and then sell them in the space market. The game was developed in collaboration with Unity and C#.
                                 </p>
                                 <a className="viewMore" href='https://github.com/NazimhanFicici/MR-MOMOFUKU'>Visit GitHub</a>
                             </div>
-                            <div className='projects-card'>
+                            <div className='projects-card flex-2'>
                                 <h1 className='card-header'>Fried Chicken</h1>
                                 <p className='card-content'>It is a 2D game that can be played with the keyboard, written in Java language and based on the principles of object-oriented programming.
                                 The game mechanics are simple the chicken which is our character falls down vertically. Enemies will start to occur as the game progresses
@@ -79,14 +89,8 @@ function Projects() {
                             </div>
                     </div>
                 </SwiperSlide>
+            </div>
             </Swiper>
-            </div>
-            <div className='cards-button'>
-                <label htmlFor="one" className="one active">
-                </label>
-                <label htmlFor="two" className="two">
-                </label>
-            </div>
            
         </div>
     )
