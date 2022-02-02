@@ -1,14 +1,23 @@
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Projects() {
     return (
-        <div className='projects-main'>
+        <div className='projects-main swiper'>
             <a className="anchor" id="projects"></a>
             <input type="radio" name="dot" id="one"></input>
             <input type="radio" name="dot" id="two"></input>
                 <h2>My Projects</h2>
-            <div className='projects-cardgroup'>
-                <div className='projects-group1'>
+            <div className='projects-cardgroup swiper-wrapper'>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide>
+                    <div className='projects-group1 swiper-slide'>
                         <div className='projects-card'>
                             <h1 className='card-header'>Pulse Of The People</h1>
                             <p className='card-content'>Pulse Of The People is a project that developed to sharpen my Web Development Skills. 
@@ -40,34 +49,37 @@ function Projects() {
                             </p>
                             <a className="viewMore" href='https://github.com/NazimhanFicici/Distance-keeper'>Visit GitHub</a>
                         </div>
-                </div>
-
-                <div className='projects-group2'>
-                <div className='projects-card'>
-                            <h1 className='card-header'>eVision</h1>
-                            <p className='card-content'>eVision is one of my Graduation Projects, in this project i developed a mobile application and used the same beacon device that i used on "Distance Keeper" project
-                            and converted this one sided broadcast to a communication with using this app. And the concept of this project was to provide voice commands to visually impaired people. Functioning of this project is like this:
-                            the user uses TTS(text to speech) technology to start the scanner if it matches with pre-defined beacon, the application will do a math with using signal strength to calculate the distance between
-                            beacon and the user.
-                            I've placed this beacon to a traffic light and gave the user informations about the distance left to traffic light and its content ( green or red ).
-                            </p>
-                            <a className="viewMore" href=''>Visit GitHub</a>
-                        </div>
-                        <div className='projects-card'>
-                            <h1 className='card-header'>MR MOMOFUKU</h1>
-                            <p className='card-content'>Mr MOMOFUKU is my last Graduation Project, The goal of Mr. Momofuku is protecting the solar system from star pirates who want to steal the sun's radiation and energy and then sell them in the space market. The game was developed in collaboration with Unity and C#.
-                            </p>
-                            <a className="viewMore" href='https://github.com/NazimhanFicici/MR-MOMOFUKU'>Visit GitHub</a>
-                        </div>
-                        <div className='projects-card'>
-                            <h1 className='card-header'>Fried Chicken</h1>
-                            <p className='card-content'>It is a 2D game that can be played with the keyboard, written in Java language and based on the principles of object-oriented programming.
-                            The game mechanics are simple the chicken which is our character falls down vertically. Enemies will start to occur as the game progresses
-                            the chicken must avoid these to reach the end.
-                            </p>
-                            <a className="viewMore" href='https://github.com/NazimhanFicici/2d-chicken-game'>Visit GitHub</a>
-                        </div>
-                </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='projects-group2 swiper-slide'>
+                    <div className='projects-card'>
+                                <h1 className='card-header'>eVision</h1>
+                                <p className='card-content'>eVision is one of my Graduation Projects, in this project i developed a mobile application and used the same beacon device that i used on "Distance Keeper" project
+                                and converted this one sided broadcast to a communication with using this app. And the concept of this project was to provide voice commands to visually impaired people. Functioning of this project is like this:
+                                the user uses TTS(text to speech) technology to start the scanner if it matches with pre-defined beacon, the application will do a math with using signal strength to calculate the distance between
+                                beacon and the user.
+                                I've placed this beacon to a traffic light and gave the user informations about the distance left to traffic light and its content ( green or red ).
+                                </p>
+                                <a className="viewMore" href=''>Visit GitHub</a>
+                            </div>
+                            <div className='projects-card'>
+                                <h1 className='card-header'>MR MOMOFUKU</h1>
+                                <p className='card-content'>Mr MOMOFUKU is my last Graduation Project, The goal of Mr. Momofuku is protecting the solar system from star pirates who want to steal the sun's radiation and energy and then sell them in the space market. The game was developed in collaboration with Unity and C#.
+                                </p>
+                                <a className="viewMore" href='https://github.com/NazimhanFicici/MR-MOMOFUKU'>Visit GitHub</a>
+                            </div>
+                            <div className='projects-card'>
+                                <h1 className='card-header'>Fried Chicken</h1>
+                                <p className='card-content'>It is a 2D game that can be played with the keyboard, written in Java language and based on the principles of object-oriented programming.
+                                The game mechanics are simple the chicken which is our character falls down vertically. Enemies will start to occur as the game progresses
+                                the chicken must avoid these to reach the end.
+                                </p>
+                                <a className="viewMore" href='https://github.com/NazimhanFicici/2d-chicken-game'>Visit GitHub</a>
+                            </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
             </div>
             <div className='cards-button'>
                 <label htmlFor="one" className="one active">
