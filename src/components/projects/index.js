@@ -37,7 +37,7 @@ function Projects() {
                                 This project can be played solo, with two players from same device or can be played online.In order to make
                                 this project online Socket.io is used. 
                             </p>
-                            <a className="viewMore" href='https://github.com/NazimhanFicici/Pulse-of-the-People'>Visit GitHub</a>
+                            <a className="viewMore" href='https://github.com/NazimhanFicici/PulseOfThePeople'>Visit GitHub</a>
                         </div>
                         <div className='projects-card flex-1'>
                             <h1 className='card-header'>Doyle PSD</h1>
@@ -45,7 +45,7 @@ function Projects() {
                             was teaching me basics of the html-css-js trio. I was only given a link of a zeplin.io platform and in that platform
                             there was a finished project and i could only access the visual features such as fonts, colors etc.
                             </p>
-                            <a className="viewMore" href='https://github.com/NazimhanFicici/Doyle-Psd'>Visit GitHub</a>
+                            <a className="viewMore" href='https://github.com/NazimhanFicici/DoylePSD'>Visit GitHub</a>
                         </div>
                         <div className='projects-card flex-3'>
                             <h1 className='card-header'>Distance Keeper</h1>
