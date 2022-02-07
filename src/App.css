@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  height: 100vh;
+  margin-top: 500px;
+}
 .App {
   text-align: center;
   /* background-color: #D8E9A8; */
@@ -138,7 +141,7 @@
   background-image: url(/src/images/entrance-bg.png);
   background-size:cover;
   background-position: center;
-  height: 440px;
+  height: 540px;
   width: 100%;
   color: white;
   justify-content: center;
@@ -162,7 +165,7 @@
   justify-content: center;
   align-items: center;
   background: #191A19;
-  padding: 24px 60px;
+  padding: 48px 60px;
   gap: 20px;
   opacity: 1.2;
   color: #FEFBF3;
@@ -197,7 +200,7 @@
   justify-content: center;
   align-items: center;
   font-family: 'Work Sans', sans-serif;
-  padding: 12px;
+  padding: 24px;
   opacity: 1.2;
 }
 .about-me-text h1{
@@ -345,7 +348,7 @@ a.anchor{
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
-  padding:30px;
+  padding:30px; 
   z-index: 2;
 }
 .flex-3{
